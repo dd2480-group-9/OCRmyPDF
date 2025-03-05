@@ -29,89 +29,106 @@ you took care of and where you spent your time, if that time exceeds
 30 minutes.
 
 ### Alexandra Ejnervall
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
 
-4. configuration and setup;
+4. configuration and setup;  
 
-5. analyzing code/output;
+5. analyzing code/output;  
 
-6. writing documentation;
+6. writing documentation;  
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
 
 ### Eren Özogul
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
 
-4. configuration and setup;
+4. configuration and setup;  
 
-5. analyzing code/output;
+5. analyzing code/output;  
 
-6. writing documentation;
+6. writing documentation;  
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
 
 ### Ryll Åman
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
+**1,5h**
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
+**2h**  
+zulip: 1h  
+OCRmyPDF: 1h
 
-4. configuration and setup;
+4. configuration and setup;  
+**2h**  
+zulip: 0.5h setting up pre-commit, vagrant and docker  
+zulip: 0.5h setting up and running dev server environment and running tests  
+OCRmyPDF: 0.5h trying to figure out structure of project, installing uv and syncing dependencies  
+OCRmyPDF: 0.5h running tests and fixing extra missing dependencies (ocrmypdf, tesseract)
 
-5. analyzing code/output;
+5. analyzing code/output;  
+**2h**  
+zulip: 1h  
+OCRmyPDF: 1h
 
-6. writing documentation;
+6. writing documentation;  
+**2.5h**  
+1h setting up issues and github structure  
+0.5h summarizing onboarding experience and structuring report  
+1h analyzing issue and specifying requirements
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
 
 ### Sebastian Kristoffersson
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
 
-4. configuration and setup;
+4. configuration and setup;  
 
-5. analyzing code/output;
+5. analyzing code/output;  
 
-6. writing documentation;
+6. writing documentation;  
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
 
 ### Youngbin Pyo
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
 
-4. configuration and setup;
+4. configuration and setup;  
 
-5. analyzing code/output;
+5. analyzing code/output;  
 
-6. writing documentation;
+6. writing documentation;  
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
+
 
 ## Overview of issue(s) and work done.
 
@@ -123,7 +140,30 @@ This issue proposes automatically assigning an Archive Serial Number (ASN) to a 
 
 The feature integrates into the OCRmyPDF processing pipeline by embedding a barcode (or similar identifier) into the PDF; however, it is designed as a standalone enhancement that should not impact existing code or functionality.
 
-## Requirements for the new feature or requirements affected by functionality being refactored
+
+## Requirements for the new feature
+
+### Barcode Generation (REQ001)
+A barcode should be created from given input data. The barcode should follow a standard format so that it can be easily recognized later for testing.
+
+### Insert Barcode into PDF (REQ002)
+The generated barcode should be added into a PDF file without changing or harming any of the existing content. The barcode should appear in a designated area that does not interfere with the original text or images.
+
+### Read Barcode for Testing (REQ003)
+The program should be able to read the barcode from the PDF to confirm that it was inserted correctly. This feature is used to test and verify that the barcode generation and insertion processes are working as expected.
+
+### PDF Integrity Preservation (REQ004)
+It should be ensured that the original layout, formatting, and content of the PDF remain unchanged after the barcode is added. The insertion process should not affect any of the existing document elements.
+
+### Error Handling and User Alerts (REQ005)
+Errors should be detected and handled during barcode generation, insertion, and reading. If something goes wrong, the program should provide clear error messages and instructions for the user to resolve the issue.
+
+### User Settings for Barcode Appearance (REQ006)
+Users should be allowed to set options for the barcode such as size, position, and style. These settings should be simple and user-friendly so that the barcode can be customized easily.
+
+### Command-Line Interface (CLI) Support (REQ007)
+The feature should include a simple command-line interface that allows users to easily run barcode generation and insertion when using the application. The CLI should provide clear instructions, options, and feedback for a smooth testing and usage experience.
+
 
 ## Code changes
 
