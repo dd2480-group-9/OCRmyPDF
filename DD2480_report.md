@@ -29,89 +29,106 @@ you took care of and where you spent your time, if that time exceeds
 30 minutes.
 
 ### Alexandra Ejnervall
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
 
-4. configuration and setup;
+4. configuration and setup;  
 
-5. analyzing code/output;
+5. analyzing code/output;  
 
-6. writing documentation;
+6. writing documentation;  
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
 
 ### Eren Özogul
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
 
-4. configuration and setup;
+4. configuration and setup;  
 
-5. analyzing code/output;
+5. analyzing code/output;  
 
-6. writing documentation;
+6. writing documentation;  
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
 
 ### Ryll Åman
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
+**1,5h**
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
+**2h**  
+zulip: 1h  
+OCRmyPDF: 1h
 
-4. configuration and setup;
+4. configuration and setup;  
+**2h**  
+zulip: 0.5h setting up pre-commit, vagrant and docker  
+zulip: 0.5h setting up and running dev server environment and running tests  
+OCRmyPDF: 0.5h trying to figure out structure of project, installing uv and syncing dependencies  
+OCRmyPDF: 0.5h running tests and fixing extra missing dependencies (ocrmypdf, tesseract)
 
-5. analyzing code/output;
+5. analyzing code/output;  
+**2h**  
+zulip: 1h  
+OCRmyPDF: 1h
 
-6. writing documentation;
+6. writing documentation;  
+**2.5h**  
+1h setting up issues and github structure  
+0.5h summarizing onboarding experience and structuring report  
+1h analyzing issue and specifying requirements
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
 
 ### Sebastian Kristoffersson
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
 
-4. configuration and setup;
+4. configuration and setup;  
 
-5. analyzing code/output;
+5. analyzing code/output;  
 
-6. writing documentation;
+6. writing documentation;  
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
 
 ### Youngbin Pyo
-1. plenary discussions/meetings;
+1. plenary discussions/meetings;  
 
-2. discussions within parts of the group;
+2. discussions within parts of the group;  
 
-3. reading documentation;
+3. reading documentation;  
 
-4. configuration and setup;
+4. configuration and setup;  
 
-5. analyzing code/output;
+5. analyzing code/output;  
 
-6. writing documentation;
+6. writing documentation;  
 
-7. writing code;
+7. writing code;  
 
-8. running code?
+8. running code?  
+
 
 ## Overview of issue(s) and work done.
 
