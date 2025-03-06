@@ -5,24 +5,23 @@ from reportlab.lib.pagesizes import letter
 import os
 import random
 
-def create_pdf_with_barcode(output_filename, barcode_path, barcode_data):
+def create_pdf_with_barcode(barcode_path, barcode_data):
     """
     Function that generates a pdf and adds a png
     
     param: 
-     output_filename : string of what user wants the filename to be
      barcode_path : string that contains path of the barcode png 
      barcode_data : string of barcode numbers
 
-    returns: None
+    returns: c an instance of the canvas 
 
     """
-    if not output_filename.lower().endswith(".pdf"):  # if filename does not contain end with .pdf add this here
-        output_filename += ".pdf"  
-    c = canvas.Canvas(output_filename, pagesize=letter)   # creates a canvas instance 
+    filename = "barcode.pdf"
+    c = canvas.Canvas(filename, pagesize=letter)   # creates a canvas instance 
     c.drawImage(f"{barcode_path}.png", 100, 500, width=400, height=200) # Creates image on pdf
     c.drawString(100, 480, f"Barcode: {barcode_data}")  # Additional text alongside png on pdf
     c.save()   # saves all edits to given path in drawImage 
+    return c
 
 def generate_barcode(barcode_data):
    """

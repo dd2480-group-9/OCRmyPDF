@@ -13,6 +13,7 @@ from collections.abc import Sequence
 from functools import partial
 from pathlib import Path
 from tempfile import mkdtemp
+from ocrmypdf.barcode import  *
 
 import PIL
 
@@ -186,10 +187,13 @@ def _run_pipeline(
         exitcode = report_output_pdf(options, start_input_file, optimize_messages)
         
         # generate barcode
-        create_pdf_with_barcode(origin_pdf, barcode_data) # barcode_data should be added later with the randomly generated numnber 
+       
+        barcode_data =  generate_barcode_number() 
+        barcode_path = generate_barcode(barcode_data)
+        barcode_pdf =  create_pdf_with_barcode(barcode_path, barcode_data) # barcode_data should be added later with the randomly generated numnber 
         
         # create a pdf with the barcode
-        barcode_pdf = create_barcode_pdf(start_input_file, exitcode)
+        
 
         # append the barcode page to the original PDF
         append_barcode_to_pdf(origin_pdf, barcode_pdf, 'barcode_pdf')
