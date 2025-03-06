@@ -1,8 +1,9 @@
+from barcode import Code128
+from barcode.writer import ImageWriter
 from reportlab.pdfgen import canvas
-from reportlab.graphics.barcode import code128
 from reportlab.lib.pagesizes import letter
+import os
 import random
-
 
 def create_pdf_with_barcode(output_filename, barcode_path, barcode_data):
 
@@ -13,6 +14,18 @@ def create_pdf_with_barcode(output_filename, barcode_path, barcode_data):
     c.drawString(100, 480, f"Barcode: {barcode_data}")
     c.save()
 
+def generate_barcode(barcode_data):
+
+   current_directory = os.getcwd()  
+   barcode_filename = "barcode"
+   
+   barcode_path = os.path.join(current_directory, barcode_filename)  
+   
+   barcode = Code128(barcode_data, writer=ImageWriter())
+   
+   barcode.save(barcode_path)
+   
+   return barcode_path
 
 def generate_barcode_number():
     """
