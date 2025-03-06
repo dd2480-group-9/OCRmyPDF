@@ -12,6 +12,14 @@ TEST_BARCODE_PDF = "test_barcode.pdf"
 TEST_OUTPUT_PDF = "test_output.pdf"
 
 
+def test_generate_barcode_number():
+    barcode_number = generate_barcode_number()
+    assert isinstance(barcode_number, str), "Barcode number should be a string"
+    assert len(barcode_number) == 6, "Barcode number should be 6 digits"
+    assert barcode_number.isdigit(), "Barcode number should contain only digits"
+
+
+
 def test_create_pdf_with_barcode():
     barcode_data = generate_barcode_number()
     barcode_path = generate_barcode(barcode_data)
@@ -27,6 +35,5 @@ def test_create_pdf_with_barcode():
 
     os.remove(barcode_path + ".png")
     os.remove(TEST_PDF)
-
 
 
