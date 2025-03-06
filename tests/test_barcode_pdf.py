@@ -18,6 +18,15 @@ def test_generate_barcode_number():
     assert len(barcode_number) == 6, "Barcode number should be 6 digits"
     assert barcode_number.isdigit(), "Barcode number should contain only digits"
 
+def test_generate_barcode():
+    barcode_data = generate_barcode_number()
+    barcode_path = generate_barcode(barcode_data)
+    assert os.path.exists(barcode_path + ".png"), "Barcode image was not created"
+    
+    with Image.open(barcode_path + ".png") as img:
+        assert img.format == "PNG", "Generated barcode image is not PNG format"
+
+    os.remove(barcode_path + ".png")  
 
 
 def test_create_pdf_with_barcode():
