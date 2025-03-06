@@ -46,3 +46,39 @@ def test_create_pdf_with_barcode():
     os.remove(TEST_PDF)
 
 
+def test_append_barcode_to_pdf():
+    
+    c = canvas.Canvas(TEST_ORIGINAL_PDF, pagesize=letter)
+    c.drawString(100, 700, "This is a test PDF with original content.")
+    c.showPage()
+    c.save()
+
+    barcode_data = generate_barcode_number()
+    barcode_path = generate_barcode(barcode_data)
+    create_pdf_with_barcode(TEST_BARCODE_PDF, barcode_path, barcode_data)
+
+    append_barcode_to_pdf(TEST_ORIGINAL_PDF, TEST_BARCODE_PDF, TEST_OUTPUT_PDF)
+    
+    assert os.path.exists(TEST_OUTPUT_PDF), "Output PDF was not created."
+
+    original_reader = PdfReader(TEST_ORIGINAL_PDF)
+    output_reader = PdfReader(TEST_OUTPUT_PDF)
+
+    assert len(output_reader.pages) == len(original_reader.pages) + 1, "Barcode page was not appended correctly."
+
+    original_text = original_reader.pages[0].extract_text()
+    output_text = output_reader.pages[0].extract_text()
+    
+    assert original_text == output_text, "Original PDF content in 1st page was modified."
+
+    last_page_text = output_reader.pages[-1].extract_text() or ""
+    assert barcode_data in last_page_text, "Barcode page was not found at the last position"
+
+    for page_num in range(len(output_reader.pages) - 1):
+        page_text = output_reader.pages[page_num].extract_text() or ""
+        assert barcode_data not in page_text, "Barcode should only be on the last page"
+
+    os.remove(barcode_path + ".png")
+    os.remove(TEST_ORIGINAL_PDF)
+    os.remove(TEST_BARCODE_PDF)
+    os.remove(TEST_OUTPUT_PDF)
