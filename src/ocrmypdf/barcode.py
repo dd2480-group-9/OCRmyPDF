@@ -3,19 +3,14 @@ from reportlab.graphics.barcode import code128
 from reportlab.lib.pagesizes import letter
 import random
 
-def create_pdf_with_barcode(output_filename, barcode_data):
-    c = canvas.Canvas(output_filename, pagesize=letter)
 
-    #Generate Random number for barcode 
-    
-    # Generate barcode
-    barcode = code128.Code128(barcode_data, barWidth=0.5, barHeight=50)
-    
-    # Add barcode to last page on PDF
-    barcode.drawOn(c, 100, 500)  # (x, y) position
-    
-    c.drawString(100, 480, f"Barcode: {barcode_data}")  # Label under barcode
-    
+def create_pdf_with_barcode(output_filename, barcode_path, barcode_data):
+
+    if not output_filename.lower().endswith(".pdf"):
+        output_filename += ".pdf"  
+    c = canvas.Canvas(output_filename, pagesize=letter)
+    c.drawImage(f"{barcode_path}.png", 100, 500, width=400, height=200)
+    c.drawString(100, 480, f"Barcode: {barcode_data}")
     c.save()
 
 
