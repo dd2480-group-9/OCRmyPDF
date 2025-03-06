@@ -54,5 +54,14 @@ def generate_barcode_number():
     barcode_data = f"{barcode_number:06d}"  # Format it as a 6-digit string with leading zeros
     return barcode_data
 
-# Usage
-create_pdf_with_barcode("barcode.pdf", "123456789")
+if __name__ == "__main__":
+    # Example of usage
+    """
+    Example of usage: 
+        This should generate a file named barcode.png containing 6 random numbers
+        This should also generate a file named hejdå.pdf with that barcode and an additional text with the barcode number
+    """
+    numbers = generate_barcode_number()
+    path = generate_barcode(numbers)
+    output = "hejdå.pdf"
+    create_pdf_with_barcode(output, path, numbers)
