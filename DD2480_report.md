@@ -222,18 +222,38 @@ The feature should include a simple command-line interface that allows users to 
 
 ### Patch
 
-(copy your changes or the add git command to show them)
+#### generate barcode
 
-git diff ...
+barcode_data =  generate_barcode_number() 
+barcode_path = generate_barcode(barcode_data)
+barcode_pdf =  create_pdf_with_barcode(barcode_path, barcode_data)  
+
+#### this crates a pdf with the barcode
+
+
+#### append the barcode page to the original PDF
+append_barcode_to_pdf(origin_pdf, barcode_pdf, 'barcode_pdf')
+ 
+
+#### Changes we made for implementation are here:
+[addbarcode.py](https://github.com/dd2480-group-9/OCRmyPDF/blob/main/src/ocrmypdf/addbarcode.py)
+
+[addbarcode_pdf.py](https://github.com/dd2480-group-9/OCRmyPDF/blob/main/src/ocrmypdf/addbarcode_pdf.py)
+
+
+
+#### We also wrote tests files
+[test_barcode_pdf.py](https://github.com/dd2480-group-9/OCRmyPDF/blob/main/tests/test_barcode_pdf.py)
 
 ## Test results
 
-Overall results with link to a copy or excerpt of the logs (before/after
-refactoring).
+When we run the test file we wrote, it passed all the test cases as in the image below.
+![Alt Text](test_results.jpeg)
 
 ## UML class diagram and its description
-
+![Alt Text](UML.png)
 ### Key changes/classes affected
+The key classes changed in this repository were from the pipeline folder. Adding the pdf generation at the end of the pipeline required us to change the code for ocr.py inside the pipeline folder.
 
 ## Overall experience
 
