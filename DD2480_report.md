@@ -202,6 +202,12 @@ refactoring).
 
 ## Overall experience
 
-What are your main take-aways from this project? What did you learn?
+Our experience with documentation on contributing and engaging with the community varied significantly across different projects. While all communities were welcoming, not all provided clear guidelines on how to contribute effectively. Specifically, our final project (`OCRmyPDF`) lacked information on dependency management and the tools used. This created unnecessary hurdles when setting up the environment. The differences in onboarding were quite noticeable, each team member encountered different issues with `OCRmyPDF`, many of which could have been easily avoided with just a few paragraphs outlining setup instructions and dependencies.
 
-How did you grow as a team, using the Essence standard to evaluate yourself?
+Working with a larger codebase presented challenges in adding functionality. Even minor changes to one part of the code often led to unintended test failures elsewhere, highlighting the complexity of maintaining and expanding an existing project.
+
+Problems with our inital project selections required us to change projects twice, forcing us to work under a much tighter deadline. To manage this, we divided our group into sub-teams: two members focused on implementation, two on writing tests, and the fifth took on coordination, documentation, and reviewing code to ensure coherence. This structure significantly improved our teamwork and communication, allowing us to work efficiently under time constraints.
+
+Additionally, we have enhanced our proficiency in Git, improved our ability to collaborate on larger projects, and become more adept at managing dependencies across different environments.
+
+In terms of the Essence framework, we are still currently at the In-Place stage, meaning the entire team is involved in evaluating and adapting our way of working. However, there is still room for improvement. One key area we identified is early-stage communication. Our project selection took longer than necessary due to other commitments, which delayed our ability to establish a clear plan from the beginning. If we had set up a structured project plan earlier, it would have likely streamlined our workflow and improved overall collaboration.
