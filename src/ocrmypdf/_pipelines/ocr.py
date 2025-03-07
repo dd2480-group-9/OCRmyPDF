@@ -13,6 +13,7 @@ from collections.abc import Sequence
 from functools import partial
 from pathlib import Path
 from tempfile import mkdtemp
+from ocrmypdf.addbarcode_pdf import  *
 
 import PIL
 
@@ -49,6 +50,9 @@ from ocrmypdf._validation import (
     create_input_file,
 )
 from ocrmypdf.exceptions import ExitCode
+from ocrmypdf.addbarcode import create_barcode_pdf, append_barcode_to_pdf
+from ocrmypdf.archive import archive_pdf
+from ocrmypdf.addbarcode_pdf import create_pdf_with_barcode
 
 log = logging.getLogger(__name__)
 
@@ -181,7 +185,23 @@ def _run_pipeline(
         optimize_messages = exec_concurrent(context, executor)
 
         exitcode = report_output_pdf(options, start_input_file, optimize_messages)
-        return exitcode
+        
+        # generate barcode
+       
+        barcode_data =  generate_barcode_number() 
+        barcode_path = generate_barcode(barcode_data)
+        barcode_pdf =  create_pdf_with_barcode(barcode_path, barcode_data) # barcode_data should be added later with the randomly generated numnber 
+        
+        # create a pdf with the barcode
+        
+
+        # append the barcode page to the original PDF
+        append_barcode_to_pdf(origin_pdf, barcode_pdf, 'barcode_pdf')
+
+        # archive original pdf
+        archive_pdf(origin_pdf)
+
+        return exitcode # should be changed later 
 
 
 def run_pipeline_cli(
