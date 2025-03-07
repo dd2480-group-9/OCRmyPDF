@@ -65,20 +65,34 @@ OCRmyPDF: 0,5h
 
 ### Eren Özogul
 1. plenary discussions/meetings;  
+**1.5h**
 
 2. discussions within parts of the group;  
+**3h**
 
 3. reading documentation;  
+***2h**
+zulip: 0,5h  
+OCRmyPDF: 1,5h
 
 4. configuration and setup;  
+**4h**
+zulip: 1h setting up a vm  
+OCRmyPDF: 3h running tests, installing dependencies
 
-5. analyzing code/output;  
+5. analyzing code/output; 
+**3h**
+OCRmyPDF: 3h 
 
 6. writing documentation;  
+**0,5h**
+OCRmyPDF: 0,5h
 
-7. writing code;  
+7. writing code; 
+**5h** 
 
 8. running code?  
+**2h** 
 
 ### Ryll Åman
 1. plenary discussions/meetings;  
