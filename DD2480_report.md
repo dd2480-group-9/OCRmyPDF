@@ -167,21 +167,32 @@ OCRmyPDF: 5h
 
 ### Youngbin Pyo
 1. plenary discussions/meetings;  
-
+    **1,5h**
 2. discussions within parts of the group;  
-
+    **3.5h** (Sebastian Kristoffersson)
+        1,5h  planning and dividing work and starting
+        2h integrating parts of work and finalizing implementation
 3. reading documentation;  
-
+    **2h**  
+    zulip: 1h  
+    OCRmyPDF: 1h
 4. configuration and setup;  
-
+    **2h**  
+    zulip: 0.5h setting up environment on vm and running tests
+    OCRmyPDF: 1h understanding project, installing and using on vm (not sucessful) 
+    OCRmyPDF: 0.5h installing project and dependencies for windows (tesseract, ghostscript) and running tests
 5. analyzing code/output;  
-
+    **3h**
+    zulip: 0.5h
+    OCRmyPDF: 2.5h
 6. writing documentation;  
-
+    **1h**
 7. writing code;  
-
+    **6h**
+    4h : barcode implementation 
+    2h: integration and finilazing with codebase 
 8. running code?  
-
+    **2h**
 
 ## Overview of issue(s) and work done.
 
