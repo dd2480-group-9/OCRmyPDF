@@ -216,6 +216,6 @@ refactoring).
 
 ## Overall experience
 
-What are your main take-aways from this project? What did you learn?
+What are your main take-aways from this project? What did you learn? Onboarding can be difficult if information regarding dependencies and such is missing. 
 
-How did you grow as a team, using the Essence standard to evaluate yourself?
+How did you grow as a team, using the Essence standard to evaluate yourself? Basically the same as the previous project. 
