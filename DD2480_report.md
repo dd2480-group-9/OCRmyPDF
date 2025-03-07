@@ -33,7 +33,7 @@ you took care of and where you spent your time, if that time exceeds
 **1,5h**
 
 2. discussions within parts of the group;  
-**1h**
+**3h**
 
 3. reading documentation;  
 ***1,5h**
@@ -41,9 +41,9 @@ zulip: 0,5h
 OCRmyPDF: 1h
 
 4. configuration and setup;  
-**2,5h**
+**4,5h**
 zulip: 1,5h setting up a vm and running tests  
-OCRmyPDF: 2h running tests, installing dependencies and so on
+OCRmyPDF: 3h running tests, installing dependencies and so on
 
 5. analyzing code/output;  
 **3h**
@@ -55,12 +55,12 @@ OCRmyPDF: 2,5h
 OCRmyPDF: 0,5h
 
 7. writing code;  
-**2,5h**
-OCRmyPDF: 2,5h 
+**4h**
+OCRmyPDF: 4h 
 
 8. running code?  
-**0,5h**
-OCRmyPDF: 0,5h
+**2h**
+OCRmyPDF: 2h
 
 
 ### Eren Özogul
