@@ -85,6 +85,7 @@ OCRmyPDF: 0,5h
 **1,5h**
 
 2. discussions within parts of the group;  
+**1h**
 
 3. reading documentation;  
 **2h**  
@@ -99,19 +100,20 @@ OCRmyPDF: 0.5h trying to figure out structure of project, installing uv and sync
 OCRmyPDF: 0.5h running tests and fixing extra missing dependencies (ocrmypdf, tesseract)
 
 5. analyzing code/output;  
-**2h**  
+**6h**  
 zulip: 1h  
-OCRmyPDF: 1h
+OCRmyPDF: 5h
 
 6. writing documentation;  
-**2.5h**  
-1h setting up issues and github structure  
-0.5h summarizing onboarding experience and structuring report  
-1h analyzing issue and specifying requirements
+**4h**
 
 7. writing code;  
+**1h**
 
 8. running code?  
+**6h**  
+zulip: 1h  
+OCRmyPDF: 5h
 
 ### Sebastian Kristoffersson
 1. plenary discussions/meetings;  
