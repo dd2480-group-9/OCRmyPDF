@@ -63,4 +63,4 @@ if __name__ == "__main__":
     numbers = generate_barcode_number()
     path = generate_barcode(numbers)
     output = "hejdå.pdf"
-    create_pdf_with_barcode(output, path, numbers)
+    create_pdf_with_barcode(path, numbers)

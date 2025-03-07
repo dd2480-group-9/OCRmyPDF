@@ -13,7 +13,7 @@ from collections.abc import Sequence
 from functools import partial
 from pathlib import Path
 from tempfile import mkdtemp
-from ocrmypdf.barcode import  *
+from ocrmypdf.addbarcode_pdf import  *
 
 import PIL
 
@@ -52,7 +52,7 @@ from ocrmypdf._validation import (
 from ocrmypdf.exceptions import ExitCode
 from ocrmypdf.addbarcode import create_barcode_pdf, append_barcode_to_pdf
 from ocrmypdf.archive import archive_pdf
-from ocrmypdf.barcode import create_pdf_with_barcode
+from ocrmypdf.addbarcode_pdf import create_pdf_with_barcode
 
 log = logging.getLogger(__name__)
 
